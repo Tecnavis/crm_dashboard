@@ -81,11 +81,11 @@ const Header = () => {
             )}
           </div>
           <Link
-            to="#"
+            to="https://milagro.tecnavis.com/shop"
             target="_blank"
             className="btn btn-sm btn-primary site-view-btn"
           >
-            <i className="fa-light fa-globe me-1"></i> <span>Dashboard</span>
+            <i className="fa-light fa-globe me-1"></i> <span>Website</span>
           </Link>
         </div>
         <div className="col-4 d-lg-none">

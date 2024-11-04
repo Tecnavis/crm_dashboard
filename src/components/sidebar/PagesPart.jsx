@@ -96,7 +96,7 @@ const PagesPart = () => {
             </li>
           </ul>
         </li> */}
-        <li className="sidebar-dropdown-item">
+        {/* <li className="sidebar-dropdown-item">
           <Link
             role="button"
             className={`sidebar-link has-sub ${error ? 'show' : ''}`}
@@ -116,8 +116,8 @@ const PagesPart = () => {
             </li>
             
           </ul>
-        </li>
-        <li className="sidebar-dropdown-item">
+        </li> */}
+        {/* <li className="sidebar-dropdown-item">
           <Link
             role="button"
             className={`sidebar-link has-sub ${additional ? 'show' : ''}`}
@@ -132,12 +132,12 @@ const PagesPart = () => {
         
             <li className="sidebar-dropdown-item">
               <NavLink to="/pricingTable2" className="sidebar-link">
-              Pricing Table 02
+              Pricing Table
               </NavLink>
             </li>
           </ul>
 
-        </li>
+        </li> */}
         <li className="sidebar-dropdown-item">
           <NavLink to="/customercreate" className="sidebar-link">
             <span className="nav-icon">
