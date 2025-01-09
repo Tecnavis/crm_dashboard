@@ -123,7 +123,7 @@ const getWarehouses = async () => {
     mainCategory: '',
     subCategory: '',
     modelNo: '',
-    date: '',
+    date: new Date().toISOString().split('T')[0],
     totalStock: '',
     title: '',
     description: '',
@@ -143,8 +143,8 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   
   // Check if any required fields are empty
-  if (!values.mainCategory || !values.subCategory || !values.modelNo || !values.date || 
-      !values.title || !values.description || !values.price || !values.warehouse ||  !values.price ) {
+  if (!values.mainCategory || !values.subCategory || !values.modelNo ||  
+      !values.title ||  !values.price || !values.warehouse ||  !values.price ) {
     
     Swal.fire({
       icon: 'warning',
