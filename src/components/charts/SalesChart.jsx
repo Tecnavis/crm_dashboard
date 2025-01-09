@@ -103,7 +103,7 @@ const SalesChart = () => {
 
   return (
     <ResponsiveContainer width="100%" maxHeight={410} minHeight={isRechartHeight}>
-      <AreaChart data={monthlyData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+      <AreaChart data={monthlyData} margin={{ top: 20, bottom: 5 }}>
         <CartesianGrid strokeDasharray="3" stroke={`${isLightTheme ? 'hsl(0deg 0% 0% / 20%)' : 'rgba(255, 255, 255, 0.2)'}`} />
         <XAxis dataKey="name" stroke={`${isLightTheme ? 'hsl(0deg 0% 27.45% / 70%)' : 'hsl(0deg 0% 89.41% / 70%)'}`} />
         <YAxis stroke={`${isLightTheme ? 'hsl(0deg 0% 27.45% / 70%)' : 'hsl(0deg 0% 89.41% / 70%)'}`} />
