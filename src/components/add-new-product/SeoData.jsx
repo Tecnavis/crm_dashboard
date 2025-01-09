@@ -141,7 +141,7 @@ const handleCoverImageChange = (e) => {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-  
+  //
   // Check if any required fields are empty
   if (!values.mainCategory || !values.subCategory || !values.modelNo ||  
       !values.title ||  !values.price || !values.warehouse ||  !values.price ) {
