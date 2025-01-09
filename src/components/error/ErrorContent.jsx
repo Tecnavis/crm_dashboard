@@ -7,7 +7,7 @@ const ErrorContent = ({imgSrc, alt, subtitle}) => {
         <div className="panel error-panel">
             <div className="panel-body h-100 d-flex flex-column align-items-center justify-content-center">
                 <div className="part-img">
-                    <img src={imgSrc} alt={alt}/>
+                    <img src={"../../public/assets/images/404.webp"} alt={alt}/>
                 </div>
                 <div className="part-txt text-center">
                     <h2 className="error-subtitle">{subtitle}</h2>

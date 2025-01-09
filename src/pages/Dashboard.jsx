@@ -7,6 +7,10 @@ import SocialVisitors from '../components/dashboard/SocialVisitors'
 import NewCustomer from '../components/dashboard/NewCustomer'
 import RecentOrder from '../components/dashboard/RecentOrder'
 const DashboardMainContent = () => {
+  const adminDetails = JSON.parse(localStorage.getItem("adminDetails"));
+  if (!adminDetails) {
+    window.location.href = "/404";
+  }else{
   return (
     <div className="main-content">
         <DashboardBreadcrumb title={'E-Commerce Dashboard'}/>
@@ -21,5 +25,5 @@ const DashboardMainContent = () => {
     </div>
   )
 }
-
+}
 export default DashboardMainContent
