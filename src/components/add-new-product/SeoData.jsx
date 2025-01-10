@@ -3,7 +3,7 @@ import { filterSubCategory, fetchMainCategory, URL, fetchWarehouses } from "../.
 import axios from "axios";
 import Swal from "sweetalert2";
 import { useForm } from "../../Helper/useForm";
-
+import imageCompression from "browser-image-compression";
 const ProductData = () => {
   const [mainCategories, setMainCategories] = useState([]);
   const [subCategories, setSubCategories] = useState([]);
@@ -131,9 +131,19 @@ const getWarehouses = async () => {
     color: '', 
   });
 
-  const handleImageChange = (e) => {
-    setImages([...images, ...e.target.files]);
-};
+  const handleImageChange = async (e) => {
+    const files = Array.from(e.target.files);
+    const compressedImages = await Promise.all(
+      files.map(async (file) => {
+        const options = {
+          maxSizeMB: 0.5, // Compress to 0.5MB
+          maxWidthOrHeight: 800, // Max width/height
+        };
+        return await imageCompression(file, options);
+      })
+    );
+    setImages([...images, ...compressedImages]);
+  };
 
 const handleCoverImageChange = (e) => {
     setCoverImage(e.target.files[0]); // Save the single cover image
